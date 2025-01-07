@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        
+        <div class="filter-section">
+            <div class="subject-filter">
+                <label for="subject">Select Subject:</label>
+                <select id="subject">
+                    <option value="">Select a subject</option>
+                    <option value="english">English</option>
+                    <option value="maths">Maths</option>
+                    <option value="science">Science</option>
+                    <option value="social">Social Science</option>
+                </select>
+            </div>
+
+            <div class="filter-conditions">
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="filterType" value="above">
+                        Above
+                    </label>
+                    <label>
+                        <input type="radio" name="filterType" value="below">
+                        Below
+                    </label>
+                    <label>
+                        <input type="radio" name="filterType" value="between">
+                        Between
+                    </label>
+                </div>
+
+                <div class="filter-values">
+                    <input type="number" id="value1" placeholder="Enter value">
+                    <input type="number" id="value2" placeholder="Enter second value" class="hidden">
+                </div>
+
+                <div class="filter-buttons">
+                    <button id="filterBtn">Filter</button>
+                    <button id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th><th>Name</th><th>English</th><th>Maths</th><th>Science</th><th>Social Science</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="Fetch.js"></script>
+</body>
+</html>
